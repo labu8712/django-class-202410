@@ -18,9 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from first.views import message_view
+from first.views import message_view, say_hello
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("message/", message_view),
+    path("say-hello/", say_hello),
 ]
