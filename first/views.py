@@ -13,9 +13,9 @@ def say_hello(request):
 
 
 def say_hello_template(request):
-    names = ["Sam", "Tom", "Amy", "okok"]
+    name = request.POST.get("name", "unknown")
     return render(
         request,
         "say_hello.html",
-        {"names": names},
+        {"name": name},
     )
