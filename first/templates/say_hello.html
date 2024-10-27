@@ -1,7 +1,11 @@
-<p>Hello {{ name }}</p>
+{% extends "base.html" %}
 
-<form method="post" action="">
-    {% csrf_token %}
-    <input type="text" placeholder="Name here" name="name">
-    <button type="submit">Send</button>
-</form>
+{% block body %}
+    <p>Hello {{ name }}</p>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <input type="text" placeholder="Name here" name="name">
+        <button type="submit">Send</button>
+    </form>
+{% endblock body %}
