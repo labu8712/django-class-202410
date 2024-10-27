@@ -19,3 +19,7 @@ def say_hello_template(request):
         "say_hello.html",
         {"name": name},
     )
+
+
+def say_hello_to(request, name):
+    return HttpResponse(f"Hello {name}")
