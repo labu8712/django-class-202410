@@ -20,4 +20,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.djlint]
 profile = "django"
-preserve_blank_lines = true
+max_blank_lines = 1
