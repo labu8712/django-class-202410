@@ -12,6 +12,7 @@ class Item(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     is_completed = models.BooleanField(default=False)
+    end_time = models.DateTimeField(blank=True, null=True)
 
     project = models.ForeignKey(Project, on_delete=models.PROTECT)
 
