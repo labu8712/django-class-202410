@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% include "_alert.html" %}
     <p>Hello {{ name }}</p>
 
     <form method="post" action="">
@@ -8,4 +9,9 @@
         <input type="text" placeholder="Name here" name="name">
         <button type="submit">Send</button>
     </form>
+    {% include "_alert.html" %}
+
+    {% include "_alert.html" %}
+
+    {% include "_alert.html" %}
 {% endblock content %}
