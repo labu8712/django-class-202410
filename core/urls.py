@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path
 
 from first.views import message_view, say_hello, say_hello_template, say_hello_to
+from todo import views as todo_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path("say-hello/", say_hello),
     path("say-hello-template/", say_hello_template),
     path("say-hello-to/<str:name>/", say_hello_to),
+    path("projects/", todo_views.project_list),
 ]

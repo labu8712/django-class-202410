@@ -1,3 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+from todo.models import Project
+
+
+def project_list(request):
+    projects = Project.objects.all()
+    return render(
+        request,
+        "project_list.html",
+        {"projects": projects},
+    )
