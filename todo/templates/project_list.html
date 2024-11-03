@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <h1>Projects</h1>
+    <h1>
+        Projects
+    </h1>
 
     <ul>
-        {% for project in projects %}<li>{{ project.name }}</li>{% endfor %}
+        {% for project in projects %}
+            <li>
+                {{ project.name }}
+            </li>
+        {% endfor %}
     </ul>
 {% endblock body %}
