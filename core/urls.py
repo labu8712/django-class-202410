@@ -27,5 +27,6 @@ urlpatterns = [
     path("say-hello/", say_hello),
     path("say-hello-template/", say_hello_template),
     path("say-hello-to/<str:name>/", say_hello_to),
-    path("projects/", todo_views.project_list),
+    path("projects/", todo_views.project_list, name="project-list"),
+    path("projects/create/", todo_views.project_create),
 ]
